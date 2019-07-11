@@ -56,7 +56,6 @@ $rev = Read-RegexFormattedInput -Prompt "Enter the minecraft version for this se
 while($true)
 {
     $server_dir = Read-RegexFormattedInput -Prompt "Enter the server directory name (default:$rev)" -Default $rev -Regex "[-_\w\d\.]+"
-    $server_dir = Resolve-Path -Path $server_dir
     if(Test-Path $server_dir)
     {
         Write-Warning "Server directory already exists."
@@ -70,6 +69,7 @@ while($true)
     }
     break
 }
+$server_dir = Resolve-Path -Path $server_dir
 # load minecraft server in directory
 Push-Location $Strings["BuildTools"]["path"]
     #java -jar BuildTools.jar --rev $rev --output-dir $server_dir
