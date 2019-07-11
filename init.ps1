@@ -4,7 +4,8 @@ $Strings = @{
         url="https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar"
     }
 }
-
+Write-Host $MyInvocation.MyCommand.Name
+exit
 function Initialize-BuildTools
 {
     Write-Information "Setting up BuildTools environment now..."
