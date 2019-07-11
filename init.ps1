@@ -72,7 +72,7 @@ while($true)
 $server_dir = Resolve-Path -Path $server_dir
 # load minecraft server in directory
 Push-Location $Strings["BuildTools"]["path"]
-    #java -jar BuildTools.jar --rev $rev --output-dir $server_dir
+    java -jar BuildTools.jar --rev $rev --output-dir $server_dir
 Pop-Location
 Write-Host "Server compilation done."
 # make run.bat files
