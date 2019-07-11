@@ -4,6 +4,10 @@ $Strings = @{
         url="https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar"
     }
 }
+function meh{
+    Write-Host "-1" $MyInvocation.MyCommand.ScriptBlock
+}
+meh
 Write-Host "0" $MyInvocation.MyCommand.ScriptBlock
 Write-Host "1" $MyInvocation.MyCommand
 Write-Host "2" $MyInvocation.MyCommand.Name
