@@ -4,22 +4,6 @@ $Strings = @{
         url="https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar"
     }
 }
-function meh{
-    Write-Host "-1" $MyInvocation.MyCommand.ScriptBlock
-}
-meh
-Write-Host "0" $MyInvocation.MyCommand.ScriptBlock
-Write-Host "1" $MyInvocation.MyCommand
-Write-Host "2" $MyInvocation.MyCommand.Name
-Write-Host "3" $MyInvocation.ScriptName
-Write-Host "4" $MyInvocation.InvocationName
-Write-Host "5" $MyInvocation.PSCommandPath
-Write-Host "6" $MyInvocation.PSScriptRoot
-Write-Host "7" $MyInvocation.MyCommand.Definition
-Write-Host "8" $ExecutionContext.Host.Name
-Write-Host "9" $PSCommandPath
-Write-Host "9" $PSCmdlet
-exit
 function Initialize-BuildTools
 {
     Write-Information "Setting up BuildTools environment now..."
