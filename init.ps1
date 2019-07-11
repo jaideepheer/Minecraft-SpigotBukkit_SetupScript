@@ -4,7 +4,13 @@ $Strings = @{
         url="https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar"
     }
 }
-Write-Host $MyInvocation.MyCommand.Name
+Write-Host "1" $MyInvocation.MyCommand
+Write-Host "2" $MyInvocation.MyCommand.Name
+Write-Host "3" $MyInvocation.ScriptName
+Write-Host "4" $MyInvocation.InvocationName
+Write-Host "5" $MyInvocation.PSCommandPath
+Write-Host "6" $MyInvocation.PSScriptRoot
+Write-Host "7" $MyInvocation.MyCommand.Definition
 exit
 function Initialize-BuildTools
 {
